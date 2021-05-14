@@ -1,3 +1,9 @@
 h1 {
-align-self: right;
+    align-self: right;
+}
+p {
+    background-color:gainsboro;
+    letter-spacing: 0.4px;
+    color:black;
+    font-size: larger;
 }
