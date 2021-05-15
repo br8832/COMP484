@@ -6,4 +6,9 @@ npm install
 
 
 then just run
+
+
+
+
+
 meteor # run program
