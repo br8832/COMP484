@@ -8,8 +8,9 @@ const jeopardy = 'https://jeopardy-api.bentleyherron.dev/api/';
 //these are the modifiers for opentbd
 let opentdb_options = {
     amount: "",//max of 50
-    category: "",//9-32 maybe
-    type:"", //can be multiple or boolean
+    category: "",//9-32 maybe   
+    difficulty: "",//easy, medium, hard
+    type:"" //can be multiple or boolean
 }
 let jeopardy_options = {
     shows: "",//0-3639
@@ -17,7 +18,7 @@ let jeopardy_options = {
 }
 // in the call, specify the opentbd parameters
 // you always need to specify amount
-async function opentdbQuestions(amount, category, type)
+async function opentdbQuestions(amount, category, difficulty, type)
 {
     //append the api call
     var append = "";
@@ -25,6 +26,8 @@ async function opentdbQuestions(amount, category, type)
         append += `amount=${amount}`;
     if(category)
         append += `&category=${category}`;
+    if(difficulty)
+        append += `&difficulty=${difficuly}`
     if(type)
         append += `type=${type}`;
     console.log(append);
