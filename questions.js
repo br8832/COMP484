@@ -27,13 +27,13 @@ async function opentdbQuestions(amount, category, difficulty, type)
     if(category)
         append += `&category=${category}`;
     if(difficulty)
-        append += `&difficulty=${difficuly}`
+        append += `&difficulty=${difficulty}`;
     if(type)
         append += `type=${type}`;
     console.log(append);
     const response = await fetch(`https://opentdb.com/api.php?${append}`);
     const data = await response.json();
-    return data;
+    return data.results;
 }
 // in the call, specify jeopardy paramaters
 // realisticall for jeopardy, we'll do random numbers
@@ -53,6 +53,12 @@ async function jeopardyQuestionsbyCategories (category)
 //this holds all the quesions globally
 //although to work with it requires funky buisiness
 //I'll see if there is an easier way later
-var opentbdTest = opentdbQuestions(30, "multiple");
-var jeopardyByCategory = jeopardyQuestionsbyCategories(1);
+var opentbdTest = opentdbQuestions(30, null ,'easy');
+//var jeopardyByCategory = jeopardyQuestionsbyCategories(3100);
 var jeopardyByShow = jeopardyQuestionsbyShow(4000);
+
+//the place in the document to append  
+function display(place)
+{
+    place.appendChild();
+}
