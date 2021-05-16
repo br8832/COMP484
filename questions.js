@@ -12,9 +12,29 @@ let opentdb_options = {
     difficulty: "",//easy, medium, hard
     type:"" //can be multiple or boolean
 }
+//what you get back
+let openttdb_results = {
+    category: "",
+    correct_answer: "",
+    difficulty: "",
+    incorrect_answers: [],
+    question: "",
+    type: ""
+}
 let jeopardy_options = {
-    shows: "",//0-3639
+    shows: "",//these works for sure 4680, 5957, 3751, 3673, 4931, 5690, 2825, 6037, 5243, 3036, 4107, 2735
     categories: ""//retrieve all categories (too many to list)
+}
+let jeopardy_parts = {
+    question: {
+        'Air Date': "2004-12-31",
+        Answer: "Copernicus",
+        Category: "HISTORY",
+        Question: "For the last 8 years of his life, Galileo was under house arrest for espousing this man's theory",
+        Round: "Jeopardy!",
+        'Show Number': 4680,
+        Value: "$200"
+    }
 }
 // in the call, specify the opentbd parameters
 // you always need to specify amount
@@ -55,7 +75,7 @@ async function jeopardyQuestionsbyCategories (category)
 //I'll see if there is an easier way later
 var opentbdTest = opentdbQuestions(30, null ,'easy');
 //var jeopardyByCategory = jeopardyQuestionsbyCategories(3100);
-var jeopardyByShow = jeopardyQuestionsbyShow(4000);
+var jeopardyByShow = jeopardyQuestionsbyShow(4680);
 
 //the place in the document to append  
 function display(place)
