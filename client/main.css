@@ -3,13 +3,9 @@ html {
     position: relative;
     min-height: 100%;
 }
-
-body {
-    
+body {   
     margin-bottom: 60px;
 }
-
-
 
 body > .container {
     padding: 60px 15px 0;
@@ -17,22 +13,17 @@ body > .container {
 .container .text-muted {
     margin: 20px 0;
 }
-
 code {
     font-size: 80%;
 }
-
 .fixed-top {
     margin-top: 80px;
 }
-
 .difficulty {
     margin-top: 40px;
 }
-
  
 /* Footer */
-
 .footer {
     position: absolute;
     text-align: center;
@@ -143,9 +134,10 @@ code {
     font-size: 14px;
     height: auto;
     font-weight: normal;
-    padding: 14px 0;
+    padding: 18px 0;
     text-transform: uppercase;
     border-color: #59B2E6;
+    margin-bottom: 0.5rem;
 }
 .btn-login:hover,
 .btn-login:focus {
@@ -153,6 +145,31 @@ code {
     background-color: #53A3CD;
     border-color: #53A3CD;
 }
+/* Questions*/
 
+.choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.3rem solid rgb(86, 165, 235, 0.25);
+    background-color: white;
+  }
+  
+  .choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  }
+  
+  .choice-prefix {
+    padding: 1.4rem 2.5rem;
+    background-color: #56a5eb;
+    color: white;
+  
+  }
+  
+  .choice-text {
+    padding: 1.5rem;
+  }
 
 

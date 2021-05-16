@@ -16,3 +16,8 @@ Router.route('/difficulty', {
     template: 'difficulty',
     name: 'difficulty'
 });
+
+Router.route('/questions', {
+    template: 'questions',
+    name: 'questions'
+});
