@@ -8,6 +8,9 @@ import './home';
 import './difficulty';
 import './footer';
 import './questions';
+import './profile'
+
+
 
 Template.home.helpers({
     title() {

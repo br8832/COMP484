@@ -2,13 +2,9 @@
 
 npm install
 
-
-
-
-then just run
+meteor
 
 
 
 
 
-meteor # run program

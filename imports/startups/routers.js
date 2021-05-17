@@ -21,3 +21,8 @@ Router.route('/questions', {
     template: 'questions',
     name: 'questions'
 });
+
+Router.route('/profile', {
+    template: 'profile',
+    name: 'profile'
+});
