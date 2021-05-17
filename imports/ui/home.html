@@ -1,9 +1,11 @@
 
-
+<!-- {{ pathFor route='difficulty' }}  will generate a path to difficulty.html when the begin button is clicked-->
 
 <template name="home">
     <div class="jumbotron text-center fixed-top">
-        <h1>Quiz App</h1>
+        <h1>Welcome to Our Quiz App</h1>
+        <h2 > At our website, you can keep track of your trivia knowledge. It will keep track of various statistics, like how many quizzes you have completed or how many total questions you got right</h2>
         <p><a class="btn btn-primary btn-lg" href="{{ pathFor route='difficulty' }}" role="button">Begin</a></p>
+        <p><a class="btn btn-primary btn-lg" href="{{ pathFor route='profile' }}" role="button">Scores</a></p>
     </div>
 </template>
