@@ -14,7 +14,58 @@
   </div>
   
   <div class="content">
-    <h2>Hello</h2>
+   <div class="container">
+     <script>
+       let container = document.querySelector(".container");
+       //username exists
+       if(localStorage.getItem('username'))
+       {
+         //greet them
+         let p = document.createElement("p");
+         p.innerHTML = 'Hello ' + localStorage.getItem('username');
+         container.appendChild(p);
+         //default image
+         let img = document.createElement("img");
+         img.classList.add("profile");
+         img.src = "pictures/spiral_plexus_multicolored_121325_1920x1080.jpg"
+         container.appendChild(img);
+       }
+       else{
+         //prompt for username
+         let input = document.createElement("input");
+         input.placeholder = "enter your name";
+         input.classList.add("profile");
+         //what to do when you enter a name
+         input.addEventListener("keydown", (event) => {
+          if(event.key == "Enter"){
+            //clean up the beginning
+            input.style.visibility = "none"; 
+            localStorage.setItem("username", input.value);
+            container.removeChild(container.children[2])
+            let p = document.createElement("p");
+            p.innerHTML = 'Hello ' + localStorage.getItem('username');
+            console.log(container.children)
+            container.removeChild(input)
+            container.appendChild(p);
+            let img = document.createElement("img");
+            img.classList.add("profile");
+            img.src = "pictures/spiral_plexus_multicolored_121325_1920x1080.jpg"
+            container.appendChild(img);
+         }
+        })
+        //append the child  
+        container.appendChild(input);
+        //also the image
+        let img = document.createElement("img");
+         img.classList.add("profile");
+         img.src = "pictures/spiral_plexus_multicolored_121325_1920x1080.jpg"
+         container.appendChild(img);
+       
+      } 
+     </script>
+     <p></p>
+     <p></p>
+   </div>
     
   </div>
 </body>

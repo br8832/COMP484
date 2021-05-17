@@ -25,6 +25,8 @@ let jeopardy_options = {
     shows: "",//these works for sure 4680, 5957, 3751, 3673, 4931, 5690, 2825, 6037, 5243, 3036, 4107, 2735
     categories: ""//retrieve all categories (too many to list)
 }
+let shows = [4680, 5957, 3751, 3673, 4931, 5690, 2825, 6037, 5243, 3036, 4107, 2735];
+var i = 0;
 let jeopardy_parts = {
     question: {
         'Air Date': "2004-12-31",
@@ -61,7 +63,7 @@ async function jeopardyQuestionsbyShow (showNumber)
 {
     const response = await fetch(`https://jeopardy-api.bentleyherron.dev/api/shows/${showNumber}`);
     const data = await response.json();
-    return data;
+    return data.questions;
 }
 async function jeopardyQuestionsbyCategories (category)
 {
@@ -73,9 +75,11 @@ async function jeopardyQuestionsbyCategories (category)
 //this holds all the quesions globally
 //although to work with it requires funky buisiness
 //I'll see if there is an easier way later
-var opentbdTest = opentdbQuestions(30, null ,'easy');
+var opentbdTestE = opentdbQuestions(10, null ,'easy');
+var opentbdTestM = opentdbQuestions(10, null ,'medium');
+var opentbdTestH = opentdbQuestions(10, null ,'hard');
 //var jeopardyByCategory = jeopardyQuestionsbyCategories(3100);
-var jeopardyByShow = jeopardyQuestionsbyShow(4680);
+var jeopardyByShow = jeopardyQuestionsbyShow(shows[i++]);
 
 //the place in the document to append  
 function display(place)

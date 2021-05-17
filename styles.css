@@ -47,3 +47,17 @@ p {
     margin-left: 200px;
     padding-left: 20px;
   }
+  .container {
+    border: 2px solid red;
+  }
+  .profile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .meta {
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+  }
