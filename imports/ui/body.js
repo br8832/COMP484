@@ -1,4 +1,5 @@
 import { Template } from 'meteor/templating';
+import { Session } from 'meteor/session'
 
 // links the files in startup and import to main css, html file in client folder
 import './body.html';
