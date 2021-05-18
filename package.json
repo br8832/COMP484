@@ -2,11 +2,11 @@
   "name": "quiz-meteor",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "deploy": "meteor deploy quizapp.meteorapp.com"
   },
   "dependencies": {
     "@babel/runtime": "^7.14.0",
-    "meteor": "^2.2.1",
-    "meteor-node-stubs": "~0.2.0"
+    "node-fetch": "^2.6.1"
   }
 }

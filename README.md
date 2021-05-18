@@ -1,8 +1,7 @@
 # COMP484
-
-npm install
-
-meteor
+to run locally
+# npm install
+# meteor
 
 
 

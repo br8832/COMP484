@@ -1,10 +1,10 @@
  
  import './questions.html';
  import { Session } from 'meteor/session'
-
+ import fetch from 'node-fetch'
  Template.questions.rendered = function(){
      let diff = Session.get("difficulty");
-     console.log(diff);
+    
 //     //base link for requsts to the api
 // opentdb = 'https://opentdb.com/api.php?';
 
@@ -87,9 +87,10 @@ startGame = () => {
 };
 
 getNewQuestion = () => {
+    
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         //go to the end page
-        Session.set("score",score);
+      
         return window.location.assign('/');
         
     }
