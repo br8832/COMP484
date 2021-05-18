@@ -110,10 +110,10 @@ getNewQuestion = () => {
 };
 //add EventListeners to go from question to question
 
-choices.forEach((choice) => {
+container.forEach((choice) => {
     choice.addEventListener('click', (e) => {
         if (!acceptingAnswers) return;
-
+        
         acceptingAnswers = false;
 
 
@@ -126,13 +126,23 @@ choices.forEach((choice) => {
       if (classToApply === "correct") {
         incrementScore(CORRECT_BONUS);
       }
-
-      selectedChoice.parentElement.classList.add(classToApply);
-
-      setTimeout(() => {
-        selectedChoice.parentElement.classList.remove(classToApply);
-        getNewQuestion();
-      }, 1000); 
+      if(e.path.length === 9)
+      {
+        selectedChoice.parentElement.classList.add(classToApply);
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+          }, 1000); 
+      }
+      else
+      {
+        selectedChoice.classList.add(classToApply);
+        setTimeout(() => {
+            selectedChoice.classList.remove(classToApply);
+            getNewQuestion();
+          }, 1000); 
+      }
+      
         
     });
     incrementScore = num => {
